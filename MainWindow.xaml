@@ -34,6 +34,7 @@
                     <RowDefinition Height=" Auto"/>
                     <RowDefinition Height=" Auto"/>
                     <RowDefinition Height=" Auto"/>
+                    <RowDefinition Height=" Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -42,14 +43,16 @@
                 
                 <Label Grid.Row="0" Grid.Column="0" Content="Player Name:" Background="DeepSkyBlue"/>
                 <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"/>
-                <Label Grid.Row="1" Grid.Column="0" Content="Gold" Background="DeepSkyBlue"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Gold:" Background="DeepSkyBlue"/>
                 <Label Grid.Row="1" Grid.Column="1"  Content="{Binding CurrentPlayer.Gold}"/>
                 <Label Grid.Row="2" Grid.Column="0" Content="Hit Points:" Background="DeepSkyBlue"/>
                 <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}"/>
-                <Label Grid.Row="3" Grid.Column="0" Content="EXP" Background="DeepSkyBlue"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="EXP:" Background="DeepSkyBlue"/>
                 <Label Grid.Row="3" Grid.Column="1"  Content="{Binding CurrentPlayer.ExperiencePoints}"/>
-                <Label Grid.Row="4" Grid.Column="0" Content="Level" Background="DeepSkyBlue"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Level:" Background="DeepSkyBlue"/>
                 <Label Grid.Row="4" Grid.Column="1"  Content="{Binding CurrentPlayer.Level}"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Crystal Shards:" Background="DeepSkyBlue"/>
+                <Label Grid.Row="5" Grid.Column="1"  Content="{Binding CurrentPlayer.Crystalshards}"/>
               
             </Grid>
             
