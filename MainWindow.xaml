@@ -99,8 +99,8 @@
                 <Image Grid.Row="1"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       Height="300"
-                       Width="250"
+                       Height="150"
+                       Width="125"
                        Source="{Binding CurrentLocation.ImageName}"/>
 
                 <TextBlock Grid.Row="2"
