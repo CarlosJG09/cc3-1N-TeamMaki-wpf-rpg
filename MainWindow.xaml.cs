@@ -24,4 +24,24 @@ public partial class MainWindow : Window
         _gameSessions = new GameSessions();
         DataContext = _gameSessions;
     }
+
+    private void OnClick_MoveNorth(object sender, RoutedEventArgs e)
+    {
+        _gameSessions.MoveNorth();
+    }
+
+    private void OnClick_MoveWest(object sender, RoutedEventArgs e)
+    {
+        _gameSessions.MoveWest();
+    }
+
+    private void OnClick_MoveEast(object sender, RoutedEventArgs e)
+    {
+        _gameSessions.MoveEast();
+    }
+
+    private void OnClick_MoveSouth(object sender, RoutedEventArgs e)
+    {
+        _gameSessions.MoveSouth();
+    }
 }

@@ -7,6 +7,9 @@
         xmlns:local="clr-namespace:CC31N_TeamMaki"
         mc:Ignorable="d"
         Title="MainWindow" Height = "768" Width="1024">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilty"/>
+    </Window.Resources>   
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -113,7 +116,27 @@
             <Label Grid.Row="1" Grid.Column="0" Content="Enemy Information" Background="LightBlue"/>
         </Grid>
         
+        <!-- Navigation Controls -->
          <Label Grid.Row="2" Grid.Column="2" Content="Navigation Controls" Background="Lavender"/>
-        
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" Height="25" Width="65" Margin="10" Content="North"
+                    Visibility="{Binding HasLocationToNorth, Converter={ StaticResource BooleanToVisibilty}}" Click="OnClick_MoveNorth"/>
+            <Button Grid.Row="1" Grid.Column="0" Height="25" Width="65" Margin="10" Content="West" 
+                    Visibility="{Binding HasLocationToWest, Converter={ StaticResource BooleanToVisibilty}}" Click="OnClick_MoveWest"/>
+            <Button Grid.Row="2" Grid.Column="1" Height="25" Width="65" Margin="10" Content="South" 
+                    Visibility="{Binding HasLocationToSouth, Converter={ StaticResource BooleanToVisibilty}}" Click="OnClick_MoveSouth"/>
+            <Button Grid.Row="1" Grid.Column="2" Height="25" Width="65" Margin="10" Content="East" 
+                    Visibility="{Binding HasLocationToEast, Converter={ StaticResource BooleanToVisibilty}}" Click="OnClick_MoveEast"/>
+        </Grid>
     </Grid>
 </Window>
