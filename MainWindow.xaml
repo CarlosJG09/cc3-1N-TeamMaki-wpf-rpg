@@ -59,10 +59,21 @@
                 <Label Grid.Row="5" Grid.Column="1"  Content="{Binding CurrentPlayer.Crystalshards}"/>
               
             </Grid>
-            
-            
-                      
-            <Label Grid.Row="1" Grid.Column="0" Content="Player Image" Background="LightSkyBlue"/>            
+                                  
+            <Label Grid.Row="1" Grid.Column="0" Content="Player Image" Background="LightSkyBlue"/>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Player Image" Background="LightSkyBlue"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Player Image" Background="LightSkyBlue"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Auswi"  Background="LightSkyBlue"/>
+            </Grid>
         </Grid>
         <Label Grid.Row="0" Grid.Column="0" Content="Menu" Background="AliceBlue" Grid.ColumnSpan="3"/>
         <Label Grid.Row="2" Grid.Column="0" Content="Inventory And Quest" Background="cyan"/>
